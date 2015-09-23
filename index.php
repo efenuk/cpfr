@@ -37,7 +37,7 @@ echo 'Fourth scenario mood : ';
 $asocial = new AsocialGiver();
 $receiver = new ItemReceiver();
 
-echo ($receiver->receive($asocial->give()))?'Good':'Bad';
+echo (!$asocial->isDrunk)?(($receiver->receive($asocial->give()))?'Good':'Bad'):'Good';
 
 echo "<br/>";
 
