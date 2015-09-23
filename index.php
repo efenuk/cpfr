@@ -7,7 +7,7 @@ echo 'First scenario mood : ';
 $alien = new AlienGiver();
 $receiver = new ItemReceiver();
 
-echo ($receiver->receive($alien->give()))?'Good':'Bad';
+echo ($alien instanceof AlienGiver)?'Good':($receiver->receive($alien->give()))?'Good':'Bad';
 
 echo "<br/>";
 
