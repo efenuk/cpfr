@@ -6,6 +6,6 @@
  * Time: 4:45 PM
  */
 
-class NormalGiver implements Giver {
+class NormalGiver implements GiverInterface {
 
 }

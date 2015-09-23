@@ -6,6 +6,6 @@
  * Time: 4:47 PM
  */
 
-class NormalItem implements Item {
+class NormalItem implements ItemInterface {
 
 }

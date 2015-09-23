@@ -6,6 +6,6 @@
  * Time: 4:40 PM
  */
 
-interface Giver {
+interface GiverInterface {
 
 }

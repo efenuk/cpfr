@@ -6,6 +6,6 @@
  * Time: 4:45 PM
  */
 
-class AsocialGiver implements Giver {
+class AsocialGiver implements GiverInterface {
 
 }

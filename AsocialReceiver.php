@@ -6,6 +6,6 @@
  * Time: 4:47 PM
  */
 
-class AsocialReceiver implements Receiver {
+class AsocialReceiver implements ReceiverInterface {
 
 }

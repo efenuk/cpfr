@@ -6,6 +6,6 @@
  * Time: 4:45 PM
  */
 
-class AlienGiver implements Giver {
+class AlienGiver implements GiverInterface {
 
 }

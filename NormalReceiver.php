@@ -6,6 +6,6 @@
  * Time: 4:47 PM
  */
 
-class NormalReceiver implements Receiver {
+class NormalReceiver implements ReceiverInterface {
 
 }

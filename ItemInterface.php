@@ -6,6 +6,6 @@
  * Time: 4:41 PM
  */
 
-interface Item {
+interface ItemInterface {
     
 }

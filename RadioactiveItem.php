@@ -6,6 +6,6 @@
  * Time: 4:47 PM
  */
 
-class RadioactiveItem implements Item {
+class RadioactiveItem implements ItemInterface {
 
 }
