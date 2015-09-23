@@ -1,11 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dev
- * Date: 9/23/15
- * Time: 4:45 PM
- */
 
 class NormalGiver implements GiverInterface {
+
+    public function give() {
+        return new NormalItem();
+    }
+
+    public function giveRadioactiveItem() {
+        return new RadioactiveItem();
+    }
 
 }

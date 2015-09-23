@@ -1,11 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dev
- * Date: 9/23/15
- * Time: 4:47 PM
- */
 
 class RadioactiveItem implements ItemInterface {
+
+    public function isGood() {
+        return false;
+    }
 
 }
