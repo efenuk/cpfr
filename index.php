@@ -13,13 +13,12 @@ echo "<br/>";
 
 echo 'Second scenario mood : ';
 
-$alien = new AlienGiver();
-$asocial = new AsocialReceiver();
+$asocial = new AsocialGiver();
 $receiver = new ItemReceiver();
 
 $asocial->getDrunk();
 
-echo (!$asocial->isDrunk)?(($receiver->receive($asocial->receive($alien->give())))?'Good':'Bad'):'Good';
+echo (!$asocial->isDrunk)?(($receiver->receive($asocial->give()))?'Good':'Bad'):'Good';
 
 echo "<br/>";
 
