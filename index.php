@@ -17,7 +17,9 @@ $alien = new AlienGiver();
 $asocial = new AsocialReceiver();
 $receiver = new ItemReceiver();
 
-echo ($receiver->receive($asocial->receive($alien->give())))?'Good':'Bad';
+$asocial->getDrunk();
+
+echo (!$asocial->isDrunk)?(($receiver->receive($asocial->receive($alien->give())))?'Good':'Bad'):'Good';
 
 echo "<br/>";
 
