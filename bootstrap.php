@@ -1,14 +1,5 @@
 <?php
 
-include 'GiverInterface.php';
-include 'ReceiverInterface.php';
-include 'ItemInterface.php';
-
-include 'AlienGiver.php';
-include 'NormalGiver.php';
-include 'AsocialGiver.php';
-
-include 'NormalItem.php';
-include 'RadioactiveItem.php';
-
-include 'ItemReceiver.php';
+spl_autoload_register(function($class) {
+    require_once sprintf("%s.php", $class);
+});

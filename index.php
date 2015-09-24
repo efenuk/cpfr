@@ -43,7 +43,7 @@ echo "<br/>";
 echo 'Fifth scenario mood : ';
 
 $normal = new NormalGiver();
-$normal->receiveFrom(new AlienGiver());
+$normal->find(new RadioactiveItem());
 $receiver = new ItemReceiver();
 
 echo ($receiver->receiveFrom($normal))?'Good':'Bad';

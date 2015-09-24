@@ -1,6 +1,6 @@
 <?php
 
-class NormalGiver implements GiverInterface, ReceiverInterface {
+class NormalGiver implements GiverInterface, FinderInterface {
 
     protected $item;
 
@@ -8,8 +8,8 @@ class NormalGiver implements GiverInterface, ReceiverInterface {
         $this->item = new NormalItem();
     }
 
-    public function receiveFrom(GiverInterface $giver) {
-        $this->item = $giver->give();
+    public function find(ItemInterface $item) {
+        $this->item = $item;
     }
 
     public function give() {

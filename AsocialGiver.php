@@ -1,6 +1,6 @@
 <?php
 
-class AsocialGiver implements GiverInterface {
+class AsocialGiver implements GiverInterface, DrunkerInterface {
 
     public $isDrunk = false;
 

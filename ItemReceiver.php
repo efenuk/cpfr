@@ -5,7 +5,7 @@ class ItemReceiver implements ReceiverInterface {
     public function receiveFrom(GiverInterface $giver)
     {
         if ($giver instanceof AlienGiver) {
-            return false;
+            return true;
         }
 
         if ($giver instanceof AsocialGiver && $giver->isDrunk) {
