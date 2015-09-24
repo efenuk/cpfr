@@ -2,6 +2,12 @@
 
 class ItemReceiver implements ReceiverInterface {
 
+    /**
+     * Return quality of item that giver have
+     *
+     * @param GiverInterface $giver
+     * @return bool
+     */
     public function receiveFrom(GiverInterface $giver)
     {
         if ($giver instanceof AlienGiver) {
