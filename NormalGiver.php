@@ -8,8 +8,8 @@ class NormalGiver implements GiverInterface, ReceiverInterface {
         $this->item = new NormalItem();
     }
 
-    public function receive(ItemInterface $item) {
-        $this->item = $item;
+    public function receiveFrom(GiverInterface $giver) {
+        $this->item = $giver->give();
     }
 
     public function give() {

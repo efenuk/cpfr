@@ -2,6 +2,6 @@
 
 interface ReceiverInterface {
 
-    public function receive(ItemInterface $item);
+    public function receiveFrom(GiverInterface $giver);
 
 }

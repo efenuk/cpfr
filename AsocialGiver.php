@@ -8,7 +8,7 @@ class AsocialGiver implements GiverInterface {
         return ($this->isDrunk)?new RadioactiveItem():new NormalItem();
     }
 
-    public function getDrunk() {
+    public function drunk() {
         $this->isDrunk = true;
     }
 

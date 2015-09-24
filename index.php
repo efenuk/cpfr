@@ -7,7 +7,7 @@ echo 'First scenario mood : ';
 $alien = new AlienGiver();
 $receiver = new ItemReceiver();
 
-echo ($alien instanceof AlienGiver)?'Good':($receiver->receive($alien->give()))?'Good':'Bad';
+echo ($alien instanceof AlienGiver)?'Good':($receiver->receiveFrom($alien))?'Good':'Bad';
 
 echo "<br/>";
 
@@ -16,9 +16,9 @@ echo 'Second scenario mood : ';
 $asocial = new AsocialGiver();
 $receiver = new ItemReceiver();
 
-$asocial->getDrunk();
+$asocial->drunk();
 
-echo (!$asocial->isDrunk)?(($receiver->receive($asocial->give()))?'Good':'Bad'):'Good';
+echo ($receiver->receiveFrom($asocial))?'Good':'Bad';
 
 echo "<br/>";
 
@@ -27,7 +27,7 @@ echo 'Third scenario mood : ';
 $normal = new NormalGiver();
 $receiver = new ItemReceiver();
 
-echo ($receiver->receive($normal->give()))?'Good':'Bad';
+echo ($receiver->receiveFrom($normal))?'Good':'Bad';
 
 echo "<br/>";
 
@@ -36,14 +36,14 @@ echo 'Fourth scenario mood : ';
 $asocial = new AsocialGiver();
 $receiver = new ItemReceiver();
 
-echo (!$asocial->isDrunk)?(($receiver->receive($asocial->give()))?'Good':'Bad'):'Good';
+echo ($receiver->receiveFrom($asocial))?'Good':'Bad';
 
 echo "<br/>";
 
 echo 'Fifth scenario mood : ';
 
 $normal = new NormalGiver();
-$normal->receive(new RadioactiveItem());
+$normal->receiveFrom(new AlienGiver());
 $receiver = new ItemReceiver();
 
-echo ($receiver->receive($normal->give()))?'Good':'Bad';
+echo ($receiver->receiveFrom($normal))?'Good':'Bad';
