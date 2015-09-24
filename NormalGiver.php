@@ -1,13 +1,19 @@
 <?php
 
-class NormalGiver implements GiverInterface {
+class NormalGiver implements GiverInterface, ReceiverInterface {
 
-    public function give() {
-        return new NormalItem();
+    protected $item;
+
+    public function __construct(){
+        $this->item = new NormalItem();
     }
 
-    public function giveRadioactiveItem() {
-        return new RadioactiveItem();
+    public function receive(ItemInterface $item) {
+        $this->item = $item;
+    }
+
+    public function give() {
+        return $this->item;
     }
 
 }
